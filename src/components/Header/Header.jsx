@@ -9,7 +9,9 @@ const Header = ({ pageTitle }) => {
     <>
       <Helmet>
         <meta
-          name="description"
+          name="viewport"
+          content="width=device-width, initial-scale = 1.0, 
+          maximum-scale=1.0, user-scalable=no"
           content="SOTA Window Coverings Delray Beach Florida"
         ></meta>
         <title>{pageTitle}</title>
