@@ -51,10 +51,7 @@ const Reviews = () => {
       <div className="section-header">Customer Reviews</div>
       <div className="row">
         <div className="col-sm-12 p-0 reviews">
-          <div
-            className="d-flex justify-content-center p-5"
-            style={{ flexDirection: "column" }}
-          >
+          <div className="p-5">
             <p
               className="pl-4 pr-4"
               style={{ zIndex: 2 }}
@@ -65,6 +62,9 @@ const Reviews = () => {
             <span className="d-block text-right mr-3" id="clientReview-name">
               - {clientReviews[count]?.name}
             </span>
+            <Link to="/testimonials" class="all-reviews">
+              <button className="m-3 button button-bg shadow">See All Reviews</button>
+            </Link>
             <span class="dot-container">
               <span
                 class={num === 0 ? "active dot" : "dot"}
@@ -95,18 +95,6 @@ const Reviews = () => {
           <a id="next" onClick={handleNewQuote}>
             &#10095;
           </a>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-sm-12 text-center">
-          <Link to="/testimonials">
-            <button
-              className="m-3 button shadow"
-              style={{ backgroundColor: "black" }}
-            >
-              See All Reviews
-            </button>
-          </Link>
         </div>
       </div>
     </>

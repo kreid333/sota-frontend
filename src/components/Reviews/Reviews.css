@@ -8,10 +8,28 @@
 }
 
 .reviews div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   height: 100%;
-  /* width: 100%; */
   background-color: rgba(0, 0, 0, 0.705);
   color: white;
+}
+
+.all-reviews {
+  position: absolute;
+  bottom: 75px;
+  display: flex;
+  align-self: center;
+  color: white;
+}
+
+.all-reviews:hover {
+  text-decoration: none;
+}
+
+.button-bg {
+  background-color: black;
 }
 
 .quote {
