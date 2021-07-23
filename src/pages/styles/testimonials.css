@@ -1,0 +1,12 @@
+.review-btn {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+.rating {
+  background-color: rgba(0, 150, 0, 0.65);
+  width: 75px;
+  border-radius: 10px;
+  color: white;
+}

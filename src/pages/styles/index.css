@@ -1,0 +1,65 @@
+.hero-logoBg {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.hero-logo {
+  width: 90%;
+  margin: 0 auto;
+  align-self: center;
+  padding: 10px 0px;
+}
+
+.hero-info {
+  margin: 10px 0px;
+}
+
+.hero-info span {
+  display: block;
+}
+
+.carousel-img {
+  height: calc(100vh - 70px);
+  object-fit: cover;
+}
+
+.consultations {
+  color: white;
+  background-color: rgba(20, 125, 255, 0.75);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.consultations-title {
+  display: block;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.about-title {
+  display: block;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.about-location {
+  display: block;
+  font-size: 2rem;
+}
+
+.about-info {
+  display: block;
+}
+
+.banner-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
