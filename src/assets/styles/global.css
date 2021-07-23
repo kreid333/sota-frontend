@@ -1,7 +1,9 @@
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat,sans-serif;
   padding-top: 70px;
-  min-width: 100%;
+  max-width: 100%;
+  min-width: fit-content;
+  margin: auto;
 }
 
 .wrapper {
