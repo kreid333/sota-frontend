@@ -27,7 +27,7 @@ export default function Home() {
               <span>4624 Danson Way</span>
               <span>Delray Beach, FL 33445</span>
               <span>
-                Phone: <a href="tel:5617054900">(561) 705-4900</a>
+                Phone: <a href="tel:5617054900" className="black-text">(561) 705-4900</a>
               </span>
             </div>
           </div>

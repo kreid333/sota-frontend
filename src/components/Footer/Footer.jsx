@@ -18,7 +18,7 @@ const Footer = () => {
             <span>Delray Beach, FL 33445</span>
             <span>
               Phone:{" "}
-              <a href="tel:5617054900">
+              <a href="tel:5617054900" className="white-text">
                 (561) 705-4900
               </a>
             </span>
