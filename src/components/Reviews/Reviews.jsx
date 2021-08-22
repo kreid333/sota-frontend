@@ -1,43 +1,22 @@
-import React, { useState } from "react"
+import React from "react"
 import "./Reviews.css"
 import { Link } from "gatsby"
+import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 let num = 0
 
 const Reviews = () => {
-  // HANDLING NAVIGATION FOR CAROUSEL
-  const handleNewQuote = e => {
-    if (e.target.id === "next") {
-      if (num === clientReviews.length - 1) {
-        num = 0
-        setCount(num)
-      } else {
-        num++
-        setCount(num)
-      }
-    } else if (e.target.id === "prev") {
-      if (num === 0) {
-        num = clientReviews.length - 1
-        setCount(num)
-      } else {
-        num--
-        setCount(num)
-      }
-    }
-  }
-
-  const [count, setCount] = useState(0)
-
   const clientReviews = [
-    {
-      text:
-        "I recently had Sota windows installed plantation shutters in my Home in Highland Beach. His job performance and professionalism was impeccable, I would certainly recommend him to my friends.",
-      name: "Devon Bowie",
-    },
     {
       text:
         "Steve and Sandy are delightful. They were professional, knowledgeable, and efficient.  I cannot image a more pleasant experience. I strongly recommend them.",
       name: "Pamela Maida",
+    },
+    {
+      text:
+        "I recently had Sota windows installed plantation shutters in my Home in Highland Beach. His job performance and professionalism was impeccable, I would certainly recommend him to my friends.",
+      name: "Devon Bowie",
     },
     {
       text:
@@ -50,51 +29,22 @@ const Reviews = () => {
     <>
       <div className="section-header">Customer Reviews</div>
       <div className="row">
-        <div className="col-sm-12 p-0 reviews">
-          <div className="p-5">
-            <p
-              className="pl-4 pr-4"
-              style={{ zIndex: 2 }}
-              id="clientReview-text"
-            >
-              "{clientReviews[count]?.text}"
-            </p>
-            <span className="d-block text-right mr-3" id="clientReview-name">
-              - {clientReviews[count]?.name}
-            </span>
-            <Link to="/testimonials" class="all-reviews">
-              <button className="m-3 button button-bg shadow">See All Reviews</button>
-            </Link>
-            <span class="dot-container">
-              <span
-                class={num === 0 ? "active dot" : "dot"}
-                onClick={() => {
-                  num = 0
-                  setCount(num)
-                }}
-              ></span>
-              <span
-                class={num === 1 ? "active dot" : "dot"}
-                onClick={() => {
-                  num = 1
-                  setCount(num)
-                }}
-              ></span>
-              <span
-                class={num === 2 ? "active dot" : "dot"}
-                onClick={() => {
-                  num = 2
-                  setCount(num)
-                }}
-              ></span>
-            </span>
+        {clientReviews.map(review => (
+          <div className="col-lg-4 p-2">
+            <div className="client-card">
+              <q>
+                <i>{review.text}</i>
+              </q>
+              <div>
+                <span>- {review.name}</span>
+              </div>
+            </div>
           </div>
-          <a id="prev" onClick={handleNewQuote}>
-            &#10094;
-          </a>
-          <a id="next" onClick={handleNewQuote}>
-            &#10095;
-          </a>
+        ))}
+        <div className="w-100 text-center mt-3 black-text">
+          <Link to="/testimonials" className="reviews-link">
+            See All Reviews <FontAwesomeIcon icon={faChevronCircleRight} />
+          </Link>
         </div>
       </div>
     </>
