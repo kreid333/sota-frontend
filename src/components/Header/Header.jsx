@@ -11,8 +11,7 @@ const Header = ({ pageTitle }) => {
         <meta
           name="viewport"
           content="width=device-width, initial-scale = 1.0, 
-          maximum-scale=1.0, user-scalable=no"
-          content="SOTA Window Coverings Delray Beach Florida"
+          maximum-scale=1.0"
         ></meta>
         <title>{pageTitle}</title>
       </Helmet>
