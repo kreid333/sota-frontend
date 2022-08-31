@@ -2,7 +2,7 @@ import { Alert } from "react-bootstrap"
 import React, { useState } from "react"
 import Layout from "../components/Layout"
 import Reviews from "../components/Reviews/Reviews"
-import axios from "axios"
+import "./styles/contact.css"
 
 const Contact = () => {
   const [name, setName] = useState("")
@@ -14,36 +14,16 @@ const Contact = () => {
   const handleSubmit = e => {
     e.preventDefault()
 
-    const contactData = {
-      name,
-      email,
-      phoneNumber,
-      message,
-    }
-
-    // IF NO FIELD IN THE CONTACT FORM IS EMPTY, SEND POST REQUEST TO SEND EMAIL 
     if (name !== "" && email !== "" && phoneNumber !== "" && message !== "") {
-      const button = document.querySelector(".submitBtn")
-      button.textContent = "Sending..."
-      axios
-        .post("https://sota-api.herokuapp.com/api/sendMail", contactData)
-        .then(() => {
-          console.log("Successfully sent data.")
-          setShow(true)
-          button.textContent = "Submit"
-          setTimeout(() => {
-            setShow(false)
-          }, 3000)
-        })
-        .catch(err => {
-          if (err) {
-            throw err
-          }
-        })
+      setShow(true)
+      setTimeout(() => {
+        setShow(false)
+      }, 3000)
     } else {
       alert("You are missing information! Please try again.")
     }
   }
+
   return (
     <Layout title="Contact">
       <div className="wrapper">
@@ -57,7 +37,20 @@ const Contact = () => {
             <div className="col-sm-12">
               <div className="card">
                 <div className="card-body">
-                  <form onSubmit={handleSubmit}>
+                  <form
+                    name="contact"
+                    method="POST"
+                    netlify-honeypot="bot-field"
+                    data-netlify="true"
+                    onSubmit={handleSubmit}
+                  >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div class="hidden">
+                      <label htmlFor="bot-field">
+                        Don’t fill this out if you’re human:
+                      </label>
+                      <input name="bot-field" />
+                    </div>
                     <div className="form-group">
                       <label htmlFor="name">Name</label>
                       <input
