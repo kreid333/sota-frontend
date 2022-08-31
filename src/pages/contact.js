@@ -115,13 +115,13 @@ const Contact = () => {
                       Submit
                     </button>
                   </form>
-                  <Alert
+                  {/* <Alert
                     className="text-center mt-3"
                     variant="success"
                     show={show}
                   >
                     <span>Email sent.</span>
-                  </Alert>
+                  </Alert> */}
                 </div>
               </div>
             </div>
