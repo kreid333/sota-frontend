@@ -9,10 +9,11 @@ const Contact = () => {
   const [email, setEmail] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("")
   const [message, setMessage] = useState("")
-  const [show, setShow] = useState(false)
+  // const [show, setShow] = useState(false)
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
+  // const handleSubmit = e => {
+  //   e.preventDefault()
+
   //   if (name !== "" && email !== "" && phoneNumber !== "" && message !== "") {
   //     setShow(true)
   //     setTimeout(() => {
@@ -37,14 +38,13 @@ const Contact = () => {
               <div className="card">
                 <div className="card-body">
                   <form
-                    className="contact-form"
                     name="contact"
                     method="POST"
                     netlify-honeypot="bot-field"
                     data-netlify="true"
                     // onSubmit={handleSubmit}
                   >
-                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="form-name" value="contact"/>
                     <div class="hidden">
                       <label htmlFor="bot-field">
                         Don’t fill this out if you’re human:
@@ -63,6 +63,7 @@ const Contact = () => {
                           setName(e.target.value)
                         }}
                         placeholder="Name"
+                        required
                       />
                     </div>
                     <div className="form-group">
@@ -77,6 +78,7 @@ const Contact = () => {
                           setEmail(e.target.value)
                         }}
                         placeholder="Email"
+                        required
                       />
                     </div>
                     <div className="form-group">
@@ -91,6 +93,7 @@ const Contact = () => {
                           setPhoneNumber(e.target.value)
                         }}
                         placeholder="Phone Number"
+                        required
                       />
                     </div>
                     <div className="form-group">
@@ -105,6 +108,7 @@ const Contact = () => {
                         }}
                         rows="10"
                         placeholder="Message"
+                        required
                       ></textarea>
                     </div>
                     <button type="submit" className="global-btn submitBtn">
