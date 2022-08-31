@@ -3,8 +3,7 @@ import Layout from "../components/Layout"
 import "./styles/about.css"
 import ContactUs from "../components/ContactUs/ContactUs"
 import Reviews from "../components/Reviews/Reviews"
-import IMG from "../assets/images/about/IMG_5161.jpg"
-import IMG1 from "../assets/images/about/IMG_5137.jpg"
+import { StaticImage } from "gatsby-plugin-image"
 
 
 const about = () => {
@@ -30,12 +29,12 @@ const about = () => {
               </p>
             </div>
             <div className="col-lg-4 text-center about-img">
-              <img className="img-bubble p-3" src={IMG1} alt="Image of windows" />
+              <StaticImage className="img-bubble p-3" src="../assets/images/about/IMG_5137.jpg" alt="Image of windows" />
             </div>
           </div>
           <div className="row">
             <div className="col-lg-4 text-center">
-              <img className="img-bubble p-3" src={IMG} alt="Image of windows" />
+              <StaticImage className="img-bubble p-3" src="../assets/images/about/IMG_5161.jpg" alt="Image of windows" />
             </div>
             <div className="col-lg-8 my-auto" style={{borderBottom: "1px solid lightgrey"}}>
               <p className="p-3">

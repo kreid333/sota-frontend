@@ -1,16 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { Carousel } from "react-bootstrap"
-import IMG1 from "../assets/images/index/IMG_5117.jpg"
-import IMG2 from "../assets/images/index/IMG_5119.jpg"
-import IMG3 from "../assets/images/index/IMG_5120.jpg"
-import IMG5 from "../assets/images/index/IMG_5130.jpg"
-import IMG6 from "../assets/images/index/IMG_5131.jpg"
-import IMG7 from "../assets/images/index/IMG_5136.jpg"
-import IMG8 from "../assets/images/index/IMG_5138.jpg"
-import SOTA from "../assets/images/logo/SOTA.png"
 import "./styles/index.css"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons"
 import ContactUs from "../components/ContactUs/ContactUs"
@@ -22,7 +15,7 @@ export default function Home() {
       <div className="row m-0 hero">
         <div className="col-lg-3 p-0">
           <div className="hero-logoBg">
-            <img className="hero-logo" src={SOTA} />
+            <StaticImage className="hero-logo" src="../assets/images/logo/SOTA.png" />
             <div className="hero-info">
               <span>4624 Danson Way</span>
               <span>Delray Beach, FL 33445</span>
@@ -35,23 +28,23 @@ export default function Home() {
         <div className="col-lg-9 p-0">
           <Carousel fade>
             <Carousel.Item>
-              <img
+              <StaticImage
                 className="d-block w-100 carousel-img"
-                src={IMG1}
+                src="../assets/images/index/IMG_5117.jpg"
                 alt="First slide"
               />
             </Carousel.Item>
             <Carousel.Item>
-              <img
+              <StaticImage
                 className="d-block w-100 carousel-img"
-                src={IMG2}
+                src="../assets/images/index/IMG_5119.jpg"
                 alt="Second slide"
               />
             </Carousel.Item>
             <Carousel.Item>
-              <img
+              <StaticImage
                 className="d-block w-100 carousel-img"
-                src={IMG3}
+                src="../assets/images/index/IMG_5120.jpg"
                 alt="Third slide"
               />
             </Carousel.Item>
@@ -90,16 +83,16 @@ export default function Home() {
       </div>
       <div className="row m-0">
         <div className="col-sm-3 p-0">
-          <img className="banner-img" src={IMG5} />
+          <StaticImage className="banner-img" src="../assets/images/index/IMG_5130.jpg" />
         </div>
         <div className="col-sm-3 p-0">
-          <img className="banner-img" src={IMG6} />
+          <StaticImage className="banner-img" src="../assets/images/index/IMG_5131.jpg" />
         </div>
         <div className="col-sm-3 p-0">
-          <img className="banner-img" src={IMG7} />
+          <StaticImage className="banner-img" src="../assets/images/index/IMG_5136.jpg" />
         </div>
         <div className="col-sm-3 p-0">
-          <img className="banner-img" src={IMG8} />
+          <StaticImage className="banner-img" src="../assets/images/index/IMG_5138.jpg" />
         </div>
       </div>
       <div className="container">

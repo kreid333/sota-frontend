@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import Layout from "../components/Layout"
-import SOTA from "../assets/images/logo/SOTA.png"
+import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar } from "@fortawesome/free-solid-svg-icons"
 import { Modal } from "react-bootstrap"
@@ -150,7 +150,7 @@ const Testimonials = () => {
         </div>
         <div className="row">
           <div className="col-sm-6 text-center">
-            <img src={SOTA} alt="SOTA Window Coverings" width="65%"></img>
+            <StaticImage className="testimonials-logo" src="../assets/images/logo/SOTA.png" alt="SOTA Window Coverings"/>
           </div>
           <div className="col-sm-6 text-center my-auto pt-4 pb-4">
             {[...Array(5)].map(() => (
