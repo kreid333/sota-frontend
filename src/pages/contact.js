@@ -35,6 +35,13 @@ const Contact = () => {
           </div>
           <div className="row">
             <div className="col-sm-12">
+              <div className="p-2 text-center" style={{backgroundColor: "red", color: "white"}}>
+                <span>Contact form is currently down at the moment. Please contact us directly: <a href="mailto: sales@sotadeor.com" style={{color: "white", textDecoration: "underline"}}>sales@sotadecor.com</a></span>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-12">
               <div className="card">
                 <div className="card-body">
                   <form
