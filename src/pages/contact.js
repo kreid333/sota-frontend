@@ -11,23 +11,17 @@ const Contact = () => {
   const [message, setMessage] = useState("")
   const [show, setShow] = useState(false)
 
-  const form = document.querySelector(".contact-form")
-
-  const handleSubmit = () => {
-    if (name !== "" && email !== "" && phoneNumber !== "" && message !== "") {
-      setShow(true)
-      setTimeout(() => {
-        setShow(false)
-      }, 3000)
-    } else {
-      alert("You are missing information! Please try again.")
-    }
-  }
-
-  form.addEventListener("submit", e => {
-    e.preventDefault()
-    handleSubmit()
-  })
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (name !== "" && email !== "" && phoneNumber !== "" && message !== "") {
+  //     setShow(true)
+  //     setTimeout(() => {
+  //       setShow(false)
+  //     }, 3000)
+  //   } else {
+  //     alert("You are missing information! Please try again.")
+  //   }
+  // }
 
   return (
     <Layout title="Contact">
@@ -48,6 +42,7 @@ const Contact = () => {
                     method="POST"
                     netlify-honeypot="bot-field"
                     data-netlify="true"
+                    // onSubmit={handleSubmit}
                   >
                     <input type="hidden" name="form-name" value="contact" />
                     <div class="hidden">
