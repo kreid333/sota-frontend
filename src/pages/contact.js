@@ -11,9 +11,9 @@ const Contact = () => {
   const [message, setMessage] = useState("")
   const [show, setShow] = useState(false)
 
-  const handleSubmit = e => {
-    e.preventDefault()
+  const form = document.querySelector(".contact-form")
 
+  const handleSubmit = () => {
     if (name !== "" && email !== "" && phoneNumber !== "" && message !== "") {
       setShow(true)
       setTimeout(() => {
@@ -23,6 +23,11 @@ const Contact = () => {
       alert("You are missing information! Please try again.")
     }
   }
+
+  form.addEventListener("submit", e => {
+    e.preventDefault()
+    handleSubmit()
+  })
 
   return (
     <Layout title="Contact">
@@ -35,21 +40,14 @@ const Contact = () => {
           </div>
           <div className="row">
             <div className="col-sm-12">
-              <div className="p-2 text-center" style={{backgroundColor: "red", color: "white"}}>
-                <span>Contact form is currently down at the moment. Please contact us directly: <a href="mailto: sales@sotadeor.com" style={{color: "white", textDecoration: "underline"}}>sales@sotadecor.com</a></span>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-sm-12">
               <div className="card">
                 <div className="card-body">
                   <form
+                    className="contact-form"
                     name="contact"
                     method="POST"
                     netlify-honeypot="bot-field"
                     data-netlify="true"
-                    onSubmit={handleSubmit}
                   >
                     <input type="hidden" name="form-name" value="contact" />
                     <div class="hidden">
