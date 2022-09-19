@@ -25,6 +25,8 @@ import IMG24 from "../../assets/images/gallery/plantationshutters/IMG_5199.jpg"
 import IMG25 from "../../assets/images/gallery/plantationshutters/IMG_5200.jpg"
 import IMG26 from "../../assets/images/gallery/plantationshutters/IMG_5201.jpg"
 import IMG27 from "../../assets/images/gallery/plantationshutters/IMG_5202.jpg"
+import IMG28 from "../../assets/images/gallery/plantationshutters/image0.jpeg"
+import IMG29 from "../../assets/images/gallery/plantationshutters/IMG_1718.jpeg"
 
 const PlantationShutters = () => {
   return (
@@ -131,6 +133,14 @@ const PlantationShutters = () => {
         </div>
         <div className="col-sm-6 mb-3 img-div">
           <img className="w-100 h-100 gallery-img" src={IMG27} alt="Plantation Shutter" />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-6 mb-3 img-div">
+          <img className="w-100 h-100 gallery-img" src={IMG28} alt="Plantation Shutter" />
+        </div>
+        <div className="col-sm-6 mb-3 img-div">
+          <img className="w-100 h-100 gallery-img" src={IMG29} alt="Plantation Shutter" />
         </div>
       </div>
     </>
